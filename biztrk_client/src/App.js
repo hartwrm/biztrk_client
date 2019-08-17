@@ -2,7 +2,10 @@ import React, {Component} from 'react'
 import Main from './components/Main'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import './css/normalize.css'
+import './css/skeleton.css'
 import './App.css'
+
 
 class App extends Component{
   state = {

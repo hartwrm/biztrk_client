@@ -6,8 +6,9 @@ class Nav extends Component{
       <nav>
         <ul>
   <li><a href="#">Login</a></li>
+  <li><a href="">BizTrk</a></li>
   <li><a href="#">News</a></li>
-</ul>
+    </ul>
       </nav>
     )
   }

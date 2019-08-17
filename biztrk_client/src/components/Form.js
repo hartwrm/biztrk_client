@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Input from './Input'
 
+
 class Form extends Component{
   constructor(props){
     super(props)
@@ -49,7 +50,7 @@ class Form extends Component{
   }
   render(){
     return(
-      <form onSubmit={this.handleSubmit}>
+      <form className="company" onSubmit={this.handleSubmit}>
         <label htmlFor="name">Company Name: </label>
         <Input type={'text'}
           id={'name'}
