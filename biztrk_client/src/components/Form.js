@@ -51,7 +51,7 @@ class Form extends Component{
     return(
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="name">Company Name: </label>
-        <input type={'text'}
+        <Input type={'text'}
           id={'name'}
           name={'name'}
           placeholder={'Company Name'}
@@ -59,7 +59,7 @@ class Form extends Component{
           value={this.state.name}
         />
         <label htmlFor="industry">Industry: </label>
-        <input type={'text'}
+        <Input type={'text'}
           id={'industry'}
           name={'industry'}
           placeholder={'Company Industry'}
@@ -67,7 +67,7 @@ class Form extends Component{
           value={this.state.industry}
         />
         <label htmlFor="open">Open price</label>
-        <input type={'number'}
+        <Input type={'number'}
           step="0.01"
           id={'open'}
           name={'open'}
@@ -76,7 +76,7 @@ class Form extends Component{
           value={this.state.open}
         />
         <label htmlFor="close">Close price</label>
-        <input type={'number'}
+        <Input type={'number'}
           step="0.01"
           id={'close'}
           name={'close'}
@@ -85,7 +85,7 @@ class Form extends Component{
           value={this.state.close}
         />
         <label htmlFor="notes">Notes:</label>
-        <input type={'text'}
+        <Input type={'text'}
           id={'notes'}
           name={'notes'}
           placeholder={'Company Notes'}

@@ -46,7 +46,7 @@ class App extends Component{
   }
   handleUpdate = (event, formInputs) => {
     event.preventDefault()
-    fetch(`companies/${formInputs.id}`, {
+    fetch(`http://localhost:3000/companies/${formInputs.id}`, {
       body: JSON.stringify(formInputs),
       method: 'PUT',
       headers: {
@@ -60,7 +60,7 @@ class App extends Component{
     .catch(err => console.log(err))
   }
   handleDelete = (deletedCompany) => {
-    fetch(`companies/${deletedCompany.id}`,{
+    fetch(`http://localhost:3000/companies/${deletedCompany.id}`,{
       method: 'DELETE',
       headers: {
         'Accept': 'application/json, text/plain, */*',
