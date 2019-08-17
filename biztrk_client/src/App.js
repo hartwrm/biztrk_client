@@ -31,7 +31,8 @@ class App extends Component{
   handleAdd = (event, formInputs) => {
     event.preventDefault()
     console.log(formInputs)
-    fetch('http://localhost:3000/companies', {
+    fetch('https://git.heroku.com/biztrk.git
+/companies', {
       body: JSON.stringify(formInputs),
       method: 'POST',
       headers: {
@@ -49,7 +50,8 @@ class App extends Component{
   }
   handleUpdate = (event, formInputs) => {
     event.preventDefault()
-    fetch(`http://localhost:3000/companies/${formInputs.id}`, {
+    fetch(`https://git.heroku.com/biztrk.git
+/companies/${formInputs.id}`, {
       body: JSON.stringify(formInputs),
       method: 'PUT',
       headers: {
@@ -63,7 +65,8 @@ class App extends Component{
     .catch(err => console.log(err))
   }
   handleDelete = (deletedCompany) => {
-    fetch(`http://localhost:3000/companies/${deletedCompany.id}`,{
+    fetch(`https://git.heroku.com/biztrk.git
+companies/${deletedCompany.id}`,{
       method: 'DELETE',
       headers: {
         'Accept': 'application/json, text/plain, */*',
