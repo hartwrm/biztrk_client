@@ -20,24 +20,7 @@ class Form extends Component{
   }
   handleSubmit(event){
     event.preventDefault()
-    fetch('http://localhost:3000/companies', {
-      method: 'POST',
-      body: JSON.stringify(this.state),
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(newCompany => newCompany.json())
-    .then(jsonCompany => this.setState({jsonCompany, ...this.state.companies}))
-    .then(this.setState({
-      name: '',
-      industry: '',
-      open: 0,
-      close: 0,
-      notes: '',
-    }))
-    .catch(err => console.log(err))
+    
   }
   render(){
     return(
