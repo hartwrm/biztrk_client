@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Form from './Form'
 
 
 class Companies extends Component{
@@ -32,7 +33,7 @@ class Companies extends Component{
           )
         })
       }
-
+      <Form />
       </div>
     )
   }
