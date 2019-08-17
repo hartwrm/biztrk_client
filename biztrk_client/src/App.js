@@ -41,6 +41,21 @@ class App extends Component{
     })
     .catch(err => console.log(err))
   }
+  handleUpdate = (event, formInputs) => {
+    event.preventDefault()
+    fetch(`companies/${formInputs.id}`, {
+      body: JSON.stringify(formInputs),
+      method: 'PUT',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+       'Content-Type': 'application/json'
+      }
+    })
+    .then(updatedCompany => {
+      this.getCompanies()
+    })
+    .catch(err => console.log(err))
+  }
   render(){
     return(
       <div className="container">
