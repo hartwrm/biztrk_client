@@ -26,12 +26,12 @@ class Company extends Component {
           <div className="company">
             <h3>{company.name}</h3>
             <h4>{company.industry}</h4>
-            <h5>${company.open}</h5>
-            <h5>${company.close}</h5>
+            <h5>Open price: ${company.open}</h5>
+            <h5>Close price: ${company.close}</h5>
             <p>Notes: {company.notes}</p>
             <button onClick={() =>
-            handleDelete(company)}>X</button>
-            <button onClick={this.toggleForm}>Edit</button>
+            handleDelete(company)}>DELETE</button>
+            <button onClick={this.toggleForm}>EDIT</button>
           </div>
         }
       </>
