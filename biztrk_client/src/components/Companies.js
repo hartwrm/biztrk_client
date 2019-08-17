@@ -1,31 +1,14 @@
 import React, {Component} from 'react'
-import Form from './Form'
+import Company from './Company'
 
-
-class Companies extends Component{
-  state = {
-    companies: []
-  }
-
-  render(){
-    return(
-      <div className="container">
-      {
-        this.state.companies.map(company => {
-          return(
-            <div key={company.id}>
-              <h3>{company.name}</h3>
-              <h4>{company.industry}</h4>
-              <h5>${company.open}</h5>
-              <h5>${company.close}</h5>
-              <p>Notes: {company.notes}</p>
-            </div>
-          )
-        })
-      }
-      <Form />
-      </div>
-    )
-  }
+function Companies(props) {
+  const {companies, handleDelete, handleUpdate} = props
+  return(
+    <div>
+      {companies.map(company => <Company key={company.id}
+      company={company} handleDelete={handleDelete} handleUpdate={handleUpdate}
+       />)}
+    </div>
+  )
 }
 export default Companies;

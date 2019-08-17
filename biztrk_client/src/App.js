@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
-import Companies from './components/Companies'
+import Main from './components/Main'
+import Nav from './components/Nav'
+import Footer from './components/Footer'
+import './App.css'
 
 class App extends Component{
   state = {
@@ -56,11 +59,33 @@ class App extends Component{
     })
     .catch(err => console.log(err))
   }
+  handleDelete = (deletedCompany) => {
+    fetch(`companies/${deletedCompany.id}`,{
+      method: 'DELETE',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(() => {
+      const companies = this.state.companies.filter((company, index) => company.id !==deletedCompany.id)
+      this.setState({companies})
+    })
+    .catch(err => console.log(err))
+  }
   render(){
     return(
+      <div className="App">
+        <Nav />
       <div className="container">
-        <Companies companies={this.state.companies} />
+        <Main
+          companies={this.state.companies}
+          handleDelete={this.handleDelete}
+          handleUpdate={this.handleUpdate}
+         />
       </div>
+      <Footer handleSubmit={this.handleAdd} />
+    </div>
     )
   }
 }
